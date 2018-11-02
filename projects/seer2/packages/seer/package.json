@@ -1,0 +1,8 @@
+{
+  "name": "seer",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "petit-dom": "^0.2.2"
+  }
+}

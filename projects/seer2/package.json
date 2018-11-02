@@ -1,0 +1,19 @@
+{
+  "name": "seer",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "parcel packages/seer-demo/index.html --open",
+    "build": "parcel build packages/seer/index.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "parcel-bundler": "^1.6.1"
+  }
+}
