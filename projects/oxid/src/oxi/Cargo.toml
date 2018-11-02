@@ -1,0 +1,7 @@
+[package]
+name = "oxi"
+version = "0.1.0"
+authors = ["Klint Mane <klintmane@gmail.com>"]
+
+[dependencies]
+clap = "2.32.0"

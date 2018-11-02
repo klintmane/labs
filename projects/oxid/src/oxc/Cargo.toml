@@ -1,0 +1,6 @@
+[package]
+name = "oxc"
+version = "0.1.0"
+authors = ["Klint Mane <klintmane@gmail.com>"]
+
+[dependencies]
