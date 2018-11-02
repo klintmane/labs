@@ -1,0 +1,2209 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#monads'
+                  class="h5 bold black caps">
+                  Monads
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#maybe'
+                  class="">
+                  Maybe
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#functors'
+                  class="h5 bold black caps">
+                  Functors
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#either'
+                  class="">
+                  Either
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#general'
+                  class="h5 bold black caps">
+                  General
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#unless'
+                  class="">
+                  unless
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#times'
+                  class="">
+                  times
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#foreach'
+                  class="">
+                  forEach
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#foreachobj'
+                  class="">
+                  forEachObj
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#every'
+                  class="">
+                  every
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#any'
+                  class="">
+                  any
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sortby'
+                  class="">
+                  sortBy
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tap'
+                  class="">
+                  tap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#unary'
+                  class="">
+                  unary
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#once'
+                  class="">
+                  once
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#memoized'
+                  class="">
+                  memoized
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#array-utils'
+                  class="h5 bold black caps">
+                  Array Utils
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#filter'
+                  class="">
+                  filter
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#map'
+                  class="">
+                  map
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#reduce'
+                  class="">
+                  reduce
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#concatall'
+                  class="">
+                  concatAll
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#zip'
+                  class="">
+                  zip
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#curryingpartial-application'
+                  class="h5 bold black caps">
+                  Currying/Partial Application
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#curry'
+                  class="">
+                  curry
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#partial'
+                  class="">
+                  partial
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#compositionpiping'
+                  class="h5 bold black caps">
+                  Composition/Piping
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#compose'
+                  class="">
+                  compose
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pipe'
+                  class="">
+                  pipe
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Monads' class='mt0'>
+    Monads
+  </h2>
+
+  
+    <p>Functors implementing a 'join' and 'chain' method.</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='maybe'>
+      Maybe
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Useful for abstracting error-handling, handles null/undefined values by short circuiting.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>Maybe</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>val</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// If someFunction below returns null, Maybe.map will short-circuit/return</span>
+<span class="hljs-comment">// {value: null} and will not run the next map in the chain</span>
+<span class="hljs-keyword">var</span> greeting = D.Maybe.of(<span class="hljs-string">"Bob"</span>)
+                      .map(someFunction)
+                      .map(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> <span class="hljs-string">"Hello there, "</span> + x);
+
+<span class="hljs-comment">// Without Maybe we would usually manually add error handling</span>
+<span class="hljs-keyword">if</span> (result === <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+} <span class="hljs-keyword">else</span> {
+    doSomething(result)
+}</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Functors' class='mt0'>
+    Functors
+  </h2>
+
+  
+    <p>Pointed Functors: Objects implementing a 'map' and 'of' method.</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='either'>
+      Either
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Like Maybe, but seperates failure and success into Left and Right objects, where Left can hold
+information on the failure, unlike Maybe's null value.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>Either</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> nameEither = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x !== <span class="hljs-literal">undefined</span> ? Either.Right.of(x) : Either.Left.of(<span class="hljs-string">"Error: Name was not provided!"</span>);
+
+<span class="hljs-keyword">var</span> greeting = nameEither(<span class="hljs-string">"Bob"</span>).map(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> <span class="hljs-string">"Hello there "</span> + x);
+<span class="hljs-built_in">console</span>.log(greeting); <span class="hljs-comment">//-&gt; returns Right {value: "Hello there Bob"}</span>
+
+<span class="hljs-keyword">var</span> greetingUndefined = nameEither().map(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> <span class="hljs-string">"Hello there "</span> + x);
+<span class="hljs-built_in">console</span>.log(greetingUndefined);<span class="hljs-comment">//-&gt; returns Left {value: "Error: Name was not provided!"}</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='General' class='mt0'>
+    General
+  </h2>
+
+  
+    <p>General High Order Functions.</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='unless'>
+      unless
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Runs a given function if the given predicate is false.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>unless(fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>, predicate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Function to be run if 
+<strong>predicate</strong>
+ is false.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</code>
+	    Either boolean or returns true/false.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code>:
+        Runs 
+<strong>fn</strong>
+ if 
+<strong>predicate</strong>
+ is false.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// outputs "Less than 10!" to the console if given x &lt; 10</span>
+unless(x &gt; <span class="hljs-number">10</span>, () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Less than 10!"</span>))</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='times'>
+      times
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Runs a given function a given number of times.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>times(number: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>number</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Number of times 
+<strong>fn</strong>
+ should be run.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    (time) - Function to be run 
+<strong>number</strong>
+ in total.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code>:
+        Runs 
+<strong>fn</strong>
+ a 
+<strong>number</strong>
+ of times.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// outputs to the console 10 times</span>
+times(<span class="hljs-number">10</span>, (x) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Printing for the <span class="hljs-subst">${x}</span> time`</span>))</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='foreach'>
+      forEach
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Traverses a given array and runs the given function with each array item.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>forEach(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array to be traversed.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    (item) - Function to be applied to each array item.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code>:
+        Runs 
+<strong>fn</strong>
+ with each 
+<strong>array item</strong>
+ as an argument.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// outputs each array item to the console</span>
+forEach([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], (a) =&gt; <span class="hljs-built_in">console</span>.log(a))</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='foreachobj'>
+      forEachObj
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Traverses a given object and runs the given function with each object property.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>forEachObj(obj: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Object to be traversed.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    (key, val) - Function to be applied to each object property.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></code>:
+        Runs 
+<strong>fn</strong>
+ with each 
+<strong>key-value pair</strong>
+ as arguments.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// outputs each key-value pair to the console as "key:value"</span>
+forEachObj({<span class="hljs-attr">x</span>:<span class="hljs-number">0</span>, <span class="hljs-attr">y</span>:<span class="hljs-number">1</span>}, (k,v) =&gt; <span class="hljs-built_in">console</span>.log(k + <span class="hljs-string">":"</span> + v))</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='every'>
+      every
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Checks if a given function returns true for <strong>every</strong> item of a given array.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>every(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array , the items of which will be evaluated.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Function to evaluate each item.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        true/false.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns true</span>
+every([<span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>], greaterThanFour)</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='any'>
+      any
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Checks if a given function returns true for <strong>any</strong> item of a given array.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>any(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array , the items of which will be evaluated.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Function to evaluate each item.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        true/false.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns true</span>
+any([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>], greaterThanFour)</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sortby'>
+      sortBy
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Returns a sorting function in ascending order for the object property, to be passed to Array.sort</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>sortBy(prop: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>prop</span> <code class='quiet'>(any)</code>
+	    Property of the object.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        The sorting function to be passed to Array.sort.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns persons array, sorted by age in ascending order</span>
+<span class="hljs-keyword">let</span> persons = [{<span class="hljs-attr">name</span>: <span class="hljs-string">"Joe"</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">32</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">"Al"</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">21</span>}]
+persons.sort(sortBy(<span class="hljs-string">"age"</span>))</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tap'>
+      tap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Returns a function with closure over a given value, which outputs the value and executes a given function with the value.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>tap(val: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>val</span> <code class='quiet'>(any)</code>
+	    A parameter of an unspecified type.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        A function, which outputs the value and executes a given function with the value.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// traverses array ouputting the current item and running the given function (output "Value is x")</span>
+forEach(arr, (x) =&gt; tap(x)(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Value is <span class="hljs-subst">${x}</span>`</span>)))</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='unary'>
+      unary
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Returns the given function or a clone accepting only one argument.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>unary(fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    A function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        A clone of the given function, accepting only one argument.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// traverses array ouputting the current item and running the given function (output "Value is x")</span>
+unary(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {}) <span class="hljs-comment">//(arg) =&gt; fn(arg)</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='once'>
+      once
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Returns a clone of the given function that can be run only once.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>once(fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    A function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        A clone of the given function that can be run only once.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// traverses array ouputting the current item and running the given function (output "Value is x")</span>
+unary(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {}) <span class="hljs-comment">//(arg) =&gt; fn(arg)</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='memoized'>
+      memoized
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Returns a clone of the given function that stores and looks up function call outputs for faster access.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>memoized(fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    A function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        A clone of the given function that stores and looks up function call outputs.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// Returns a memoized clone of myFunc</span>
+myFuncFast = memoized(myFunc)</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Array Utils' class='mt0'>
+    Array Utils
+  </h2>
+
+  
+    <p>Functions helping with array operations.</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='filter'>
+      filter
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Traverses a given array, runs the given function with each array item and returns an array with the new items for which fn is true.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>filter(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array to be traversed.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    (item) - Function to be applied to each array item.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        New array where fn is true for each item.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns [1, 2]</span>
+filter([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], (a) =&gt; a&lt;<span class="hljs-number">3</span>)</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='map'>
+      map
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Traverses a given array, runs the given function with each array item and returns an array with the new items.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>map(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array to be traversed.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    (item) - Function to be applied to each array item.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        New array where each item is fn(arr.item).
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns [2, 4, 6]</span>
+map([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], (a) =&gt; a*<span class="hljs-number">2</span>)</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='reduce'>
+      reduce
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Reduces a given array into a single value from applying a given function to the accumulator and each item.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>reduce(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>, init: any?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array to be reduced.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Reducing function.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>init</span> <code class='quiet'>(any?)</code>
+	    Initial value of the accumulator.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Containing the value of the reduced array.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns the sum [6]</span>
+reduce([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], (acc, item) =&gt; acc + item)
+<span class="hljs-comment">// returns the product [8]</span>
+reduce([<span class="hljs-number">4</span>, <span class="hljs-number">2</span>], (acc, item) =&gt; acc * item)
+<span class="hljs-comment">// returns [{kiwi: 7}]</span>
+arr = [{<span class="hljs-attr">kiwi</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">pear</span>: <span class="hljs-number">5</span>}, {<span class="hljs-attr">kiwi</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">pear</span>: <span class="hljs-number">0</span>}]
+reduce(arr, (acc, item) =&gt; {<span class="hljs-keyword">return</span> {<span class="hljs-attr">kiwi</span>: acc.kiwi + item.kiwi}}, {<span class="hljs-attr">kiwi</span>: <span class="hljs-number">0</span>})</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='concatall'>
+      concatAll
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Flattens a one-level deep nested array.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>concatAll(arr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array to be flattened.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Flattened array.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns ["A", "B"]</span>
+concatAll([[<span class="hljs-string">"A"</span>], [<span class="hljs-string">"B"</span>]])</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='zip'>
+      zip
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Zips two given arrays together.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>zip(arrL: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, arrR: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arrL</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The first array.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arrR</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    The second array.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    (itemL, itemR) - Function for zipping items together.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        New array resulting from the zip.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// returns [8, 7]</span>
+zip([<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>], (x, y) =&gt; x + y)</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Currying/Partial Application' class='mt0'>
+    Currying/Partial Application
+  </h2>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='curry'>
+      curry
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Takes a function with an arity of n and returns n nested unary functions.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>curry(fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Function with n arguments.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        Nested functions taking one argument.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>add = curry(<span class="hljs-function">(<span class="hljs-params">x, y, z</span>) =&gt;</span> x + y + z)
+add(<span class="hljs-number">5</span>)(<span class="hljs-number">8</span>)(<span class="hljs-number">3</span>) <span class="hljs-comment">//would otherwise be add(5, 8, 3)</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='partial'>
+      partial
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Takes a function <em>fn</em> and arguments <em>argsP</em>, some undefined, returns a function
+taking the undefined arguments, that when called runs <em>fn</em> with the arguments combined.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>partial(fn: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>, argsP: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Function
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>argsP</span> <code class='quiet'>(any)</code>
+	    Partial supplied arguments.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        Function taking the remaining undefined arguments.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>add = <span class="hljs-function">(<span class="hljs-params">x, y</span>) =&gt;</span> x + y
+addTwo = partial(add, <span class="hljs-number">2</span>, <span class="hljs-literal">undefined</span>)
+addTwo(<span class="hljs-number">5</span>) <span class="hljs-comment">// returns 7</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='Composition/Piping' class='mt0'>
+    Composition/Piping
+  </h2>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='compose'>
+      compose
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Takes functions <strong>f1, f2, ..., fn</strong> and returns a single function accepting <strong>arg</strong>, which calls <strong>f1(...(fn(arg)))</strong>.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>compose(fns: ...<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>, arg: any?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fns</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Functions to be composed.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arg</span> <code class='quiet'>(any?)</code>
+	    Argument to be passed to the returned function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        Accepting arg.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>square = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x*x
+double = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x*<span class="hljs-number">2</span>
+doubleSquare = compose(double, square)
+doubleSquare(<span class="hljs-number">4</span>) <span class="hljs-comment">//-&gt; returns 32</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pipe'>
+      pipe
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><em>Takes functions <strong>f1, f2, ..., fn</strong> and returns a single function accepting <strong>arg</strong>, which calls <strong>fn(...(f1(arg)))</strong>.</em></p>
+
+
+  <div class='pre p1 fill-light mt0'>pipe(fns: ...<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>, arg: any?): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fns</span> <code class='quiet'>(...<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Functions to be piped.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>arg</span> <code class='quiet'>(any?)</code>
+	    Argument to be passed to the returned function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a></code>:
+        Accepting arg.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>square = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x*x
+double = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x*<span class="hljs-number">2</span>
+squareDouble = pipe(double, square)
+squareDouble(<span class="hljs-number">4</span>) <span class="hljs-comment">//-&gt; returns 64</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

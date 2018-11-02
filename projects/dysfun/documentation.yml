@@ -1,0 +1,38 @@
+toc:
+  - name: Monads
+    description: |
+      Functors implementing a 'join' and 'chain' method.
+  - Maybe
+  - name: Functors
+    description: |
+      Pointed Functors: Objects implementing a 'map' and 'of' method.
+  - Either
+  - name: General
+    description: |
+      General High Order Functions.
+  - unless
+  - times
+  - forEach
+  - forEachObj
+  - every
+  - any
+  - sortBy
+  - tap
+  - unary
+  - once
+  - memoized
+  - name: Array Utils
+    description: |
+      Functions helping with array operations.
+  - filter
+  - map
+  - reduce
+  - concatAll
+  - zip
+  - name: Currying/Partial Application
+  - curry
+  - partial
+  - name: Composition/Piping
+  - compose
+  - pipe
+

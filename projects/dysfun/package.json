@@ -1,0 +1,25 @@
+{
+  "name": "dysfun",
+  "version": "1.0.0",
+  "description": "Small (dys)functional Javascript library",
+  "main": "index.js",
+  "scripts": {
+    "sandbox": "babel-node ./sandbox.js",
+    "document": "documentation build src/** -f html -o docs -c documentation.yml",
+    "distribute": "make",
+    "try": "npm run document; npm run distribute; npm run sandbox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klintmane/dysfun.git"
+  },
+  "author": "Klint Mane @klintmane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klintmane/dysfun/issues"
+  },
+  "homepage": "https://github.com/klintmane/dysfun#readme",
+  "devDependencies": {
+    "babel-preset-node6": "^11.0.0"
+  }
+}
