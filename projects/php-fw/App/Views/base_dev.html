@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <hr>
+      <p>Dev Stats</p>
+      <p>Route Params:</p>
+      <pre>{{ routeParams }}</pre>
+      <p>Query Params:</p>
+      <pre>{{ queryParams }}</pre>
+    <hr>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/posts/index">Posts</a>
+    </nav>
+    <hr>
+    {% block body %}{% endblock %}
+  </body>
+</html>
