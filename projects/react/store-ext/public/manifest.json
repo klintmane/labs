@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Re-Store Dev Tools",
+  "description": "The Re-Store Chrome Extension",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the Re-Store Dev Tools"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}

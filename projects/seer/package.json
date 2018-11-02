@@ -1,0 +1,14 @@
+{
+  "name": "@srcode/seer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/lib/index.js",
+  "devDependencies": {
+    "serve": "^9.1.0"
+  },
+  "scripts": {
+    "start": "serve ./src"
+  },
+  "author": "Klint Mane",
+  "license": "MIT"
+}
