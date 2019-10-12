@@ -1,0 +1,4 @@
+aiohttp >= 3.5.4
+aiohttp_cors >= 0.7.0
+watchgod >= 0.4
+motor >= 2.0.0

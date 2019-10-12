@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+  db:
+    build: ./services/db
+    volumes:
+      - db_data:/var/lib/postgresql
+    ports:
+      - "5000:5432"
+    environment:
+      - POSTGRES_DB=main
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=secret
+  collector_db:
+    image: mongo
+    volumes:
+      - collector_db_data:/data/db
+    ports:
+      - "5100:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=main
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+  api:
+    build: ./services/api
+    tty: true
+    volumes:
+      - ./services/api:/src
+    environment:
+      - DB_CONN=postgres://admin:secret@db/main?sslmode=disable
+    ports:
+      - "4000:8080"
+    depends_on:
+      - db
+  collector:
+    build: ./services/collector
+    tty: true
+    volumes:
+      - ./services/collector:/src
+    environment:
+      - DB_CONN=mongodb://admin:secret@collector_db/main
+    ports:
+      - "4100:8080"
+    depends_on:
+      - collector_db
+  client:
+    build: ./services/client
+    volumes:
+      - ./services/client:/app
+    ports:
+      - "3000:1234"
+    depends_on:
+      - api
+volumes:
+  db_data:
+  collector_db_data:

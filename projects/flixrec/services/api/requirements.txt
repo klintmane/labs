@@ -1,0 +1,5 @@
+aiohttp >= 3.5.4
+aiohttp_cors >= 0.7.0
+watchgod >= 0.4
+asyncpg >= 0.18.3
+geoip2 >= 2.9.0
